@@ -3,6 +3,7 @@ set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
 set ignorecase              " case insensitive matching
 set mouse=a                 " middle-click paste with mouse
+set clipboard=unnamed       " enables pasting from default clipboard
 set hlsearch                " highlight search results
 set tabstop=4               " number of columns occupied by a tab character
 set softtabstop=4           " see multiple spaces as tabstops so <BS> does the right thing
