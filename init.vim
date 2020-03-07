@@ -21,7 +21,7 @@ colorscheme default 	    " set colour scheme as default
 tnoremap <Esc> <C-\><C-n>
 
 " MAP LEADER CONFIG
-let g:mapleader='/'         " sets mapleader key
+let g:mapleader=','         " sets mapleader key
 nnoremap <leader>h :split<cr>
 nnoremap <leader>v :vsplit<cr>
 
