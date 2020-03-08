@@ -1,6 +1,6 @@
 " PLUGIN
-"call plug#begin('~/nvim/plugged')
-"Plug 'morhetz/gruvbox'      " gruvbox colour scheme
+"call plug#begin()
+"Plug 'morhetz/gruvbox'
 "call plug#end()
 
 " GENERAL CONFIG
