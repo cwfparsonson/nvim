@@ -1,3 +1,8 @@
+" PLUGIN
+"call plug#begin('~/nvim/plugged')
+"Plug 'morhetz/gruvbox'      " gruvbox colour scheme
+"call plug#end()
+
 " GENERAL CONFIG
 set nocompatible            " disable compatibility to old-time vi
 set showmatch               " show matching brackets.
@@ -15,7 +20,7 @@ set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on 		    " syntax highlighting
-colorscheme default 	    " set colour scheme as default
+colorscheme default 	    " set colour scheme
 
 " TERMINAL EMULATOR CONFIG
 tnoremap <Esc> <C-\><C-n>
