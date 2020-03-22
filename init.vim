@@ -1,7 +1,7 @@
 " PLUGIN
-"call plug#begin()
-"Plug 'morhetz/gruvbox'
-"call plug#end()
+call plug#begin()
+Plug 'morhetz/gruvbox'
+call plug#end()
 
 " GENERAL CONFIG
 set nocompatible            " disable compatibility to old-time vi
@@ -20,7 +20,9 @@ set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on 		    " syntax highlighting
-colorscheme default 	    " set colour scheme
+"colorscheme default 	    " set colour scheme
+colorscheme gruvbox
+set background=dark         " set gruvbox colorscheme to dark mode
 
 " TERMINAL EMULATOR CONFIG
 tnoremap <Esc> <C-\><C-n>

@@ -1,5 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
-let g:netrw_dirhist_3='C:\Users\Christopher\AppData\Local\nvim'
-let g:netrw_dirhist_2='C:/Users/Christopher/AppData/Local/nvim'
-let g:netrw_dirhist_1='C:\Users\Christopher\AppData\Local\nvim'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/zciccwf/phd_project/projects/route_net/code'
+let g:netrw_dirhist_2='/home/zciccwf/phd_project/projects/route_net/github_repo'
+let g:netrw_dirhist_3='/home/zciccwf/phd_project/projects/route_net/github_repo/demo_notebooks'
