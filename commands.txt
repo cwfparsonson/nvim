@@ -1,0 +1,94 @@
+# TMUX
+------------------------------------------------------
+set -g prefix C-a (Sets prefix to Ctrl-a)
+tmux ls (check what is running)
+tmux list-panes -a
+tmux list-window
+ctrl+b, d (close tmux window)
+
+tmux move-pane -s 3:0
+
+tmux new -s <session-name> (create session)
+tmux attach-session -t <session-name> (go into session already created)
+tmux kill-session -t <session-name>
+Ctrl+a d (detach from session)
+
+Ctrl+a " (split horizontally)
+Ctrl+a % (split vertically)
+Ctrl+a arrowKey (move between screens
+
+
+# Creating New SSH Tunnel
+1. In terminal, ssh into final server you want to tunnel to
+2. tmux new -s <name_of_session>
+3. (tmux attach-session -t <session_name>) if didn't open automatically
+3. conda activate <env_name> (env should have e.g. jupyter installed)
+4. jupyter-notebook --port=mammoth_port_#### (port no. e.g. 6002). Make a note of the link with the token
+5. ctrl+b, d (detach from tmux)
+6. exit (go back to berlin server if remote accessing from laptop)
+7. ssh -Nf -L berlin_port_####:localhost:mammoth_port_#### mammoth
+8. exit (go back to local machine)
+9. ssh -Nf -L mammoth_port_####:localhost:berlin_port_#### zciccwf@ssh.ee.ucl.ac.uk
+10. localhost:mammoth_port_#### (type into internet search bar)
+11. if prompted, copy-paste the token=<copy-paste-this-token> into prompt asking for password/token
+
+
+
+----------------------------------------------------
+
+# LINUX
+------------------------------------------------------
+dpkg -L <packagename> (to find where package is installed)
+pwd (print working directory)
+grep -w <word> * (search all files in directory for word)
+grep -r <word> * (recursively search all directories and subdirectories)
+chown user <filename> (change ownership of file)
+mv <oldfile.txt> <newfile.txt> (rename file) 
+du -s -h <filename> (show the disk usage of a certain folder)
+chmod -R 777 <filename> (give all users permissions to make directories under that directory)
+dd if=/dev/zero of=/dev/sdX bs=1M #replace X with the target drive letter. (wipe a disk by filling it with zeros)
+history (shows all previous commands used)
+dmesg (prints our message buffer of kernel, good for debugging)
+exit (exit ssh'd server)
+------------------------------------------------------
+
+
+
+
+
+# NEOVIM
+------------------------------------------------------
+# Basic
+nvim <filename> (open file with neovim)
+:q (quits file)
+:q! (force quit)
+:wq (save and quit)
+:w (save file)
+:<lineNumber> (takes you to line)
+:PlugInstall (installs new plugin)
+Ctrl-w <arrowKey> (switch panes)
+V (select line)
+v (select characters)
+y (yank the selection)
+p (paste on line below)
+P (paste on line above)
+d (cut selections)
+u (undo)
+Ctrl-R (redo)
+gg (go to top of file)
+G (go to EOF)
+0 (go to start of line)
+$ (go to EOL)
+i (go to insert mode from command mode)
+esc (go to command mode from insert mode)
+:set paste (takes you to paste mode)
+	p (paste)
+	shift ins (paste from clipboard into terminal)
+	:set nopaste (leave paste mode)
+
+# Navigation
+:tab new (open new tab)
+:E (list files & folders in dir)
+<Enter> (select file/folder)
+gt (go to right tab)
+gT (go to left tab)
