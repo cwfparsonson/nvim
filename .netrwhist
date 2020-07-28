@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/home/zciccwf/phd_project/projects/route_net/code'
-let g:netrw_dirhist_2='/home/zciccwf/phd_project/projects/route_net/github_repo'
-let g:netrw_dirhist_3='/home/zciccwf/phd_project/projects/route_net/github_repo/demo_notebooks'
-let g:netrw_dirhist_4='/home/zciccwf/phd_project/projects/deep_scheduler/code/src'
-let g:netrw_dirhist_5='/home/zciccwf/.config/nvim'
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io'
+let g:netrw_dirhist_2='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io/_projects'
+let g:netrw_dirhist_3='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io/_bibliography'
+let g:netrw_dirhist_4='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io'
+let g:netrw_dirhist_5='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io/_bibliography'
+let g:netrw_dirhist_6='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io'
+let g:netrw_dirhist_7='/home/cwfparsonson/Insync/zciccwf@ucl.ac.uk/OneDriveBiz/personal/cwfparsonson.github.io/_projects'
