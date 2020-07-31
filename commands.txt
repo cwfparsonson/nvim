@@ -1,3 +1,4 @@
+----------------------------------------------------
 # TMUX
 ------------------------------------------------------
 set -g prefix C-a (Sets prefix to Ctrl-a)
@@ -18,7 +19,7 @@ Ctrl+a % (split vertically)
 Ctrl+a arrowKey (move between screens
 
 
-# Creating New SSH Tunnel
+# Creating New SSH Tunnel (mammoth port: 6017, berlin port: 10017)
 1. In terminal, ssh into final server you want to tunnel to
 2. tmux new -s <name_of_session>
 3. (tmux attach-session -t <session_name>) if didn't open automatically
@@ -35,7 +36,6 @@ Ctrl+a arrowKey (move between screens
 
 
 ----------------------------------------------------
-
 # LINUX
 ------------------------------------------------------
 dpkg -L <packagename> (to find where package is installed)
@@ -50,12 +50,17 @@ dd if=/dev/zero of=/dev/sdX bs=1M #replace X with the target drive letter. (wipe
 history (shows all previous commands used)
 dmesg (prints our message buffer of kernel, good for debugging)
 exit (exit ssh'd server)
+
+grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files)
+grep -rl $'<oldstr>' . | xargs sed -i s@'<oldstr>'@'<newstr>'@g (find and replace all oldstr with new str in all child trees/dirs/files)
+
 ------------------------------------------------------
 
 
 
 
 
+------------------------------------------------------
 # NEOVIM
 ------------------------------------------------------
 # Basic
@@ -79,15 +84,24 @@ gg (go to top of file)
 G (go to EOF)
 0 (go to start of line)
 $ (go to EOL)
+w (next word)
+6w (skip to 6th word)
+b (prev word)
+( (end of sentence)
+) (start of sentence)
 i (go to insert mode from command mode)
 esc (go to command mode from insert mode)
 :set paste (takes you to paste mode)
 	p (paste)
 	shift ins (paste from clipboard into terminal)
 	:set nopaste (leave paste mode)
+<<<<<<< HEAD
 <map_leader>cs (sexy comment, any lang)
 <map_leader>cu (uncomment, any lang)
 <map_leader><c<space> (normal comment)
+=======
+:%s/<find>/<replace>/gc (find and replace globally with confirm message)
+>>>>>>> 50c36833e32aad74fad6ed3c03b27356a76f6f1f
 
 # Navigation
 :tab new (open new tab)
@@ -95,6 +109,50 @@ esc (go to command mode from insert mode)
 <Enter> (select file/folder)
 gt (go to right tab)
 gT (go to left tab)
+
+
+
+
+
+
+
+------------------------------------------------------
+# GIT
+------------------------------------------------------
+# force pull
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+
+# force push
+git push <remote_url> --force
+
+git remote -v (list remote origin)
+
+# change remote origin
+git remote rm origin (remove origins)
+git remote add origin <remote_url>
+git config master.remote origin
+git config master.merge refs/heads/master
+
+# revert local repo to a previous commit (can then push)
+git revert --no-commit <commit_unique_token>..HEAD
+git commit
+
+
+
+
+
+------------------------------------------------------
+# JEKYLL, BUNDLE & GITHUB PAGES
+------------------------------------------------------
+bundle exec jekyll serve --force_polling (build site locally, then http://localhost:4000) (N.B. If make change to .yml, must restart to refresh)
+
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-" PLUGIN (using vim-plug package manager)
+" PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'davidhalter/jedi-vim'
