@@ -19,7 +19,7 @@ Ctrl+a % (split vertically)
 Ctrl+a arrowKey (move between screens
 
 
-# Creating New SSH Tunnel
+# Creating New SSH Tunnel (mammoth port: 6017, berlin port: 10017)
 1. In terminal, ssh into final server you want to tunnel to
 2. tmux new -s <name_of_session>
 3. (tmux attach-session -t <session_name>) if didn't open automatically
@@ -95,6 +95,7 @@ esc (go to command mode from insert mode)
 	p (paste)
 	shift ins (paste from clipboard into terminal)
 	:set nopaste (leave paste mode)
+:%s/<find>/<replace>/gc (find and replace globally with confirm message)
 
 # Navigation
 :tab new (open new tab)
@@ -116,6 +117,9 @@ gT (go to left tab)
 git fetch --all
 git reset --hard origin/master
 git pull origin master
+
+# force push
+git push <remote_url> --force
 
 git remote -v (list remote origin)
 
