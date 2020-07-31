@@ -95,13 +95,10 @@ esc (go to command mode from insert mode)
 	p (paste)
 	shift ins (paste from clipboard into terminal)
 	:set nopaste (leave paste mode)
-<<<<<<< HEAD
 <map_leader>cs (sexy comment, any lang)
 <map_leader>cu (uncomment, any lang)
 <map_leader><c<space> (normal comment)
-=======
 :%s/<find>/<replace>/gc (find and replace globally with confirm message)
->>>>>>> 50c36833e32aad74fad6ed3c03b27356a76f6f1f
 
 # Navigation
 :tab new (open new tab)
