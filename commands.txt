@@ -85,6 +85,9 @@ esc (go to command mode from insert mode)
 	p (paste)
 	shift ins (paste from clipboard into terminal)
 	:set nopaste (leave paste mode)
+<map_leader>cs (sexy comment, any lang)
+<map_leader>cu (uncomment, any lang)
+<map_leader><c<space> (normal comment)
 
 # Navigation
 :tab new (open new tab)
@@ -92,3 +95,13 @@ esc (go to command mode from insert mode)
 <Enter> (select file/folder)
 gt (go to right tab)
 gT (go to left tab)
+
+
+
+
+
+
+
+
+
+

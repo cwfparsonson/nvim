@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdcommenter'
 call plug#end()
 
 " GENERAL CONFIG
