@@ -7,6 +7,8 @@ tmux list-panes -a
 tmux list-window
 ctrl+b, d (close tmux window)
 
+<leader>, " (split panes horizontally)
+<leader>, % (split panes vertically)
 tmux move-pane -s 3:0
 
 tmux new -s <session-name> (create session)
@@ -65,9 +67,15 @@ grep -rl $'<oldstr>' . | xargs sed -i s@'<oldstr>'@'<newstr>'@g (find and replac
 # NEOVIM
 ------------------------------------------------------
 # Basic
+h j k l (left up down right)
 nvim <filename> (open file with neovim)
+p>          " disable arrow
 i (insert mode)
+I (go to start of line insert mode)
 A (go to end of line insert mode)
+a (go to rhs of current character insert mode)
+O (go to line above insert mode)
+o (go to line below insert mode)
 :q (quits file)
 :q! (force quit)
 :wq (save and quit)
@@ -92,7 +100,10 @@ w (next word)
 b (prev word)
 ( (end of sentence)
 ) (start of sentence)
-i (go to insert mode from command mode)
+{ (jump down code block)
+} (jump up code block)
+<num_lines><down_key> (go number of lines down)
+<num_lines><up_key> (go number of lines up)
 esc (go to command mode from insert mode)
 :set paste (takes you to paste mode)
 	p (paste)

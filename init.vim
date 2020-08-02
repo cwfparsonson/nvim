@@ -7,6 +7,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -39,6 +40,7 @@ set background=dark         " set gruvbox colorscheme to dark mode
 let g:neomake_python_enabled_markers = ['pylint'] " set pylint as python code checker
 call neomake#configure#automake('nrwi', 500)
 nnoremap <C-p> :GFiles<CR>  " use GFiles for quick file navigation
+set relativenumber
 
 " AUTOCOMPLETE CONFIG
 "let g:jedi#completions_enabled = 0 "use deoplete for autocompletion therefore can disable
@@ -55,3 +57,11 @@ let g:mapleader=','         " sets mapleader key
 nnoremap <leader>h :split<cr>
 nnoremap <leader>v :vsplit<cr>
 xnoremap p pgvy             " allows for pasting multiple times
+nnoremap <Up> <Nop>          " disable arrow keys
+nnoremap <Down> <Nop>
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+inoremap  <Up>     <Nop>
+inoremap  <Down>   <Nop>
+inoremap  <Left>   <Nop>
+inoremap  <Right>  <Nop>
