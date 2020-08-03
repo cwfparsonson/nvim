@@ -15,6 +15,7 @@ Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'mbbil/undotree'
 call plug#end()
 
 " GENERAL CONFIG
@@ -46,7 +47,7 @@ set noerrorbells            " disable error sound effects
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.nvim/undodir
+set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 
