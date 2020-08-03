@@ -1,3 +1,5 @@
+source ~/.config/nvim/plugged/coc_conf.vim
+
 " PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
 call plug#begin()
 Plug 'morhetz/gruvbox'
@@ -7,7 +9,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jiangmiao/auto-pairs'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
