@@ -65,7 +65,8 @@ let g:netrw_winsize=25
 tnoremap <Esc> <C-\><C-n>
 
 " MAP LEADER CONFIG
-let g:mapleader=','         " sets mapleader key
+"let g:mapleader=','         " sets mapleader key
+let g:mapleader=' '         " sets mapleader key
 nnoremap <leader>h :split<cr>
 nnoremap <leader>v :vsplit<cr>
 xnoremap p pgvy             " allows for pasting multiple times
@@ -87,4 +88,4 @@ nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <Leader>ps :Rg<SPACE>
-map <C-n> :NERDTreeToggle<CR>
+map <leader>pv :NERDTreeToggle<CR>

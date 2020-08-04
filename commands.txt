@@ -1,11 +1,12 @@
 ----------------------------------------------------
 # TMUX
 ------------------------------------------------------
-set -g prefix C-a (Sets prefix to Ctrl-a)
+(<leader> == ctrl+,)
+tmux source-file .tmux.conf (updated tmux to current .tmux.conf config)
 tmux ls (check what is running)
 tmux list-panes -a
 tmux list-window
-ctrl+b, d (close tmux window)
+<leader>, d (close tmux window)
 
 # Basic
 <leader>, " (split panes horizontally)
