@@ -8,14 +8,13 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
-Plug 'mbbil/undotree'
 call plug#end()
 
 " GENERAL CONFIG
@@ -51,6 +50,10 @@ set undodir=~/.config/nvim/undodir
 set undofile
 set incsearch
 
+let g:netrw_browse_split=2
+let g:netrw_banner=0
+let g:netrw_winsize=25
+
 "AUTOCOMPLETE CONFIG
 "let g:jedi#completions_enabled = 0 "use deoplete for autocompletion therefore can disable
 "let g:jedi#use_splits_not_buffers = "right" "open go-to func in split, not another buffer
@@ -74,3 +77,14 @@ inoremap  <Up>     <Nop>
 inoremap  <Down>   <Nop>
 inoremap  <Left>   <Nop>
 inoremap  <Right>  <Nop>
+
+" NERD TREE
+let g:NERDTreeQuitOnOpen = 1
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+"nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <Leader>ps :Rg<SPACE>
+map <C-n> :NERDTreeToggle<CR>

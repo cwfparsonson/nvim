@@ -7,19 +7,20 @@ tmux list-panes -a
 tmux list-window
 ctrl+b, d (close tmux window)
 
+# Basic
 <leader>, " (split panes horizontally)
 <leader>, % (split panes vertically)
 tmux move-pane -s 3:0
+<leader> + dont release + arrow keys (resize pane)
+<leader>, c (create new window)
+<leader>, n (move to next window)
+<leader>, p (move to previous window)
+exit (close single tmux pane)
+<leader>, :kill-session (close all windows and/or panes at once)
 
 tmux new -s <session-name> (create session)
 tmux attach-session -t <session-name> (go into session already created)
 tmux kill-session -t <session-name>
-Ctrl+a d (detach from session)
-
-Ctrl+a " (split horizontally)
-Ctrl+a % (split vertically)
-Ctrl+a arrowKey (move between screens
-
 
 # Creating New SSH Tunnel (mammoth port: 6017, berlin port: 10017)
 1. In terminal, ssh into final server you want to tunnel to
@@ -121,6 +122,15 @@ esc (go to command mode from insert mode)
 gt (go to right tab)
 gT (go to left tab)
 
+# Nerd tree navigation
+ctrl+n (open nerd tree)
+t: (Open the selected file in a new tab)
+i: (Open the selected file in a horizontal split window)
+s: (Open the selected file in a vertical split window)
+I: (Toggle hidden files)
+m: (Show the NERD Tree menu)
+R: (Refresh the tree, useful if files change outside of Vim)
+?: (Toggle NERD Tree's quick help)
 
 
 
