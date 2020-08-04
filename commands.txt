@@ -18,6 +18,8 @@ tmux move-pane -s 3:0
 <leader>, p (move to previous window)
 exit (close single tmux pane)
 <leader>, :kill-session (close all windows and/or panes at once)
+<leader> [ (go into copy mode, can page up/down terminal output)
+q (quit copy mode)
 
 tmux new -s <session-name> (create session)
 tmux attach-session -t <session-name> (go into session already created)
