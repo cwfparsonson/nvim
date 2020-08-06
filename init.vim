@@ -54,13 +54,6 @@ let g:netrw_browse_split=2
 let g:netrw_banner=0
 let g:netrw_winsize=25
 
-"AUTOCOMPLETE CONFIG
-"let g:jedi#completions_enabled = 0 "use deoplete for autocompletion therefore can disable
-"let g:jedi#use_splits_not_buffers = "right" "open go-to func in split, not another buffer
-"let g:deoplete#enable_at_startup=1 " enable deoplete autocomplete
-"autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif " auto close autocomplete
-"inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " TERMINAL EMULATOR CONFIG
 tnoremap <Esc> <C-\><C-n>
 
@@ -86,5 +79,5 @@ nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
 "nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <Leader>ps :Rg<SPACE>
-map <leader>pv :NERDTreeToggle<CR>
+"nnoremap <Leader>ps :Rg<SPACE>
+map <leader>nt :NERDTreeToggle<CR>

@@ -58,8 +58,8 @@ history (shows all previous commands used)
 dmesg (prints our message buffer of kernel, good for debugging)
 exit (exit ssh'd server)
 
-grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files)
-grep -rl $'<oldstr>' . | xargs sed -i s@'<oldstr>'@'<newstr>'@g (find and replace all oldstr with new str in all child trees/dirs/files)
+grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files. -r=recursive,-n=line number,-w=match whole word,-l=file names of matches
+grep -rl '<oldstr>' . | xargs sed -i 's/<oldstr>/<newstr>/g' (find and replace all oldstr with new str in all child trees/dirs/files)
 
 ------------------------------------------------------
 
@@ -163,7 +163,7 @@ git config master.merge refs/heads/master
 git revert --no-commit <commit_unique_token>..HEAD
 git commit
 
-
+git add -u . (remove deleted files from github. Can then commit+push)
 
 
 
