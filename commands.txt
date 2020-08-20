@@ -9,6 +9,7 @@ tmux list-window
 <leader>, d (close tmux window)
 
 # Basic
+# tmux (launch tmux)
 <leader>, " (split panes horizontally)
 <leader>, % (split panes vertically)
 tmux move-pane -s 3:0
@@ -176,6 +177,18 @@ bundle exec jekyll serve --force_polling (build site locally, then http://localh
 
 
 
+
+----------------------------------------------------
+# SPHINX
+------------------------------------------------------
+# build & overwrite docstring formatting
+cd <module_root>/docs
+sphinx-apidoc -f -o <dir with conf.py>/ <dir with package>/<package>
+e.g. sphinx-apidoc -f -o docs/ ../../trafpy
+
+# build auto-updating sphinx local website
+cd <module_root>/docs
+sphinx-autobuild docs docs/_build/html
 
 
 

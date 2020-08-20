@@ -1,15 +1,15 @@
-"source ~/.config/nvim/plugged/coc_conf.vim
+source ~/.config/nvim/plugged/coc_conf.vim
 
 " PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
 call plug#begin()
 Plug 'morhetz/gruvbox'
 "Plug 'davidhalter/jedi-vim'
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 "Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Plug 'jiangmiao/auto-pairs'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -32,6 +32,7 @@ set autoindent              " indent a new line the same amount as the line just
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 set cc=80                   " set an 80 column border for good coding style
+set nowrap
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on 		            " syntax highlighting
 set pastetoggle=<F2>        " switch in and out of paste mode
@@ -40,7 +41,7 @@ set background=dark         " set gruvbox colorscheme to dark mode
 :let g:airline_theme='wombat' " set theme of airline ribbon
 let g:neomake_python_enabled_markers = ['pylint'] " set pylint as python code checker
 call neomake#configure#automake('nrwi', 500)
-nnoremap <C-p> :GFiles<CR>  " use GFiles for quick file navigation
+nnoremap <C-p> :GFiles<CR>
 set relativenumber
 set noerrorbells            " disable error sound effects
 set smartcase
@@ -58,8 +59,8 @@ let g:netrw_winsize=25
 tnoremap <Esc> <C-\><C-n>
 
 " MAP LEADER CONFIG
-let g:mapleader=','         " sets mapleader key
-nnoremap <leader>h :split<cr>
+let g:mapleader=' '         " sets mapleader key
+nnoremap <leader>s :split<cr>
 nnoremap <leader>v :vsplit<cr>
 xnoremap p pgvy             " allows for pasting multiple times
 nnoremap <Up> <Nop>          " disable arrow keys
