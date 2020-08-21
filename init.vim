@@ -3,12 +3,8 @@ source ~/.config/nvim/plugged/coc_conf.vim
 " PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
 call plug#begin()
 Plug 'morhetz/gruvbox'
-"Plug 'davidhalter/jedi-vim'
-"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"Plug 'zchee/deoplete-jedi'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-"Plug 'jiangmiao/auto-pairs'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
@@ -79,6 +75,4 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-"nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-"nnoremap <Leader>ps :Rg<SPACE>
 map <leader>nt :NERDTreeToggle<CR>
