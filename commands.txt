@@ -173,6 +173,10 @@ Tip: Have a main file that serves as hub, <Ctrl + p> to file you want to go to (
 ------------------------------------------------------
 # GIT
 ------------------------------------------------------
+# basic
+git add -u . (remove deleted files from github. Can then commit+push)
+git remote -v (list remote origin)
+
 # force pull
 git fetch --all
 git reset --hard origin/master
@@ -180,8 +184,6 @@ git pull origin master
 
 # force push
 git push <remote_url> --force
-
-git remote -v (list remote origin)
 
 # change remote origin
 git remote rm origin (remove origins)
@@ -193,8 +195,33 @@ git config master.merge refs/heads/master
 git revert --no-commit <commit_unique_token>..HEAD
 git commit
 
-git add -u . (remove deleted files from github. Can then commit+push)
+# create new branch, make changes, merge changes back to master
+git checkout -b <branch_name> (create new branch, git checkout <branch_name> to switch branches)
+git add .
+git commit -m "updated branch"
+git push (push changes to branch)
+git checkout master (switch to master branch)
+git merge <branch_name> (merge branch_name with master)
+git push (push merged changes to master branch)
+git branch -d <branch_name> (delete branch you've now finished with)
 
+# resolving merge conflicts
+files with merge conflicts will have conflicts highlighted as:
+
+<<<<<<< HEAD:index.html
+<div id="footer">contact : email.support@github.com</div>
+=======
+<div id="footer">
+ please contact us at support@github.com
+</div>
+>>>>>>> iss53:index.html
+
+where anything between <<<<<<<< HEAD and ======== is what was originally
+in the file, and anything between ========= and >>>>>>>>>>> was what 
+has since been added which is conflicting with the original. To resolve,
+delete the highlight notation (i.e. delete <<<<<< HEAD, ====== etc) AND
+either the original content or the new content so that only one is remaining,
+then push.
 
 
 ------------------------------------------------------
