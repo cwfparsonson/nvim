@@ -254,6 +254,28 @@ sphinx-autobuild docs docs/_build/html
 
 
 
+----------------------------------------------------
+# CONDA
+------------------------------------------------------
+# launch jupyter-notebook inside a conda environment
+conda install ipykernel
+python -m ipykernel install --user --name <env_name> --display-name "<env_display_name>"
+jupyter-notebook
+# then click Kernel -> Change kernel -> <env_name>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
