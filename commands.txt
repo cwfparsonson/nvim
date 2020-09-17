@@ -198,6 +198,8 @@ git config master.merge refs/heads/master
 git revert --no-commit <commit_unique_token>..HEAD
 git commit
 
+git branch # check branches (*<current_branch>)
+
 # create new branch, make changes, merge changes back to master
 git checkout -b <branch_name> (create new branch, git checkout <branch_name> to switch branches)
 git add .
@@ -217,6 +219,8 @@ files with merge conflicts will have conflicts highlighted as:
 <div id="footer">
  please contact us at support@github.com
 </div>
+
+git branch # check branches (*<current_branch>)
 >>>>>>> iss53:index.html
 
 where anything between <<<<<<<< HEAD and ======== is what was originally
@@ -262,6 +266,10 @@ conda install ipykernel
 python -m ipykernel install --user --name <env_name> --display-name "<env_display_name>"
 jupyter-notebook
 # then click Kernel -> Change kernel -> <env_name>
+
+# dead kernel
+conda uninstall ipykernel
+conda install ipykernel
 
 
 
