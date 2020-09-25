@@ -1,3 +1,4 @@
+" IMPORT COC CONFIGURATION
 source ~/.config/nvim/plugged/coc_conf.vim
 
 " PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
