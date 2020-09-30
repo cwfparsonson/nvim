@@ -272,6 +272,8 @@ pygments_style = 'friendly'
 github_url = '<github_project_url>'
 # set sphinx master doc for readthedocs to find in conf.py (otherwise get contents.rst not found)
 master_doc = 'index'
+# in <module_root>/docs, execute
+make html
 
 # build & overwrite docstring formatting
 cd <module_root>/docs
