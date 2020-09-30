@@ -244,6 +244,33 @@ bundle exec jekyll serve --force_polling (build site locally, then http://localh
 ----------------------------------------------------
 # SPHINX
 ------------------------------------------------------
+# GETTING STARTED
+# install the following packages with pip or conda
+sphinx
+nb2plots
+sphinx_rtd_theme
+# set up project with quickstart in root dir of proj
+sphinx-quickstart
+# move new files into e.g. docs/ dir at root of project, and in conf.py uncomment following to tell where proj root is
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+# add following useful extensions to conf.py
+extensions = [
+        'sphinx_rtd_theme',
+        'sphinx.ext.autodoc',
+        'nb2plots',
+        'sphinx.ext.napoleon',
+        'sphinx.ext.viewcode',
+        'texext'
+]
+# replace/add in conf.py:
+html_theme = 'sphinx_rtd_theme'
+pygments_style = 'friendly'
+github_url = '<github_project_url>'
+# set sphinx master doc for readthedocs to find in conf.py (otherwise get contents.rst not found)
+master_doc = 'index'
+
 # build & overwrite docstring formatting
 cd <module_root>/docs
 sphinx-apidoc -f -o <dir with conf.py>/ <dir with package>/<package>
