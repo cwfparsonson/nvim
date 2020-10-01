@@ -284,6 +284,8 @@ e.g. sphinx-apidoc -f -o docs/ ../../trafpy
 cd <module_root>/docs
 sphinx-autobuild docs docs/_build/html
 
+# to host on readthedocs, need a .readthedocs.yml in project root dir. This will instruct readthedocs e.g. which packages to install when building documentation. See https://github.com/cwfparsonson/trafpy/blob/master/.readthedocs.yml for example
+
 
 
 
