@@ -64,6 +64,12 @@ exit (exit ssh'd server)
 grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files. -r=recursive,-n=line number,-w=match whole word,-l=file names of matches
 grep -rl '<oldstr>' . | xargs sed -i 's/<oldstr>/<newstr>/g' (find and replace all oldstr with new str in all child trees/dirs/files)
 
+watch nvidia-smi (check GPU usage status on servers)
+
+# transfer file from/to local machine to/from server (use scp -r to transfer folder)
+scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
+scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/code/src/dynamic_images.mp4 /home/cwfparsonson/Downloads
+
 ------------------------------------------------------
 
 
