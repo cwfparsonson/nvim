@@ -70,6 +70,9 @@ watch nvidia-smi (check GPU usage status on servers)
 scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
 scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/code/src/dynamic_images.mp4 /home/cwfparsonson/Downloads
 
+# remove large log file safely
+sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
+
 ------------------------------------------------------
 
 
