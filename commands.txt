@@ -74,6 +74,9 @@ showquota (show how much space you have left on server hard drive)
 df -h (print disk free space in human readable format)
 du -h (print disk utilisation in human readable format)
 
+# remove large log file safely
+sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
+
 ------------------------------------------------------
 
 
