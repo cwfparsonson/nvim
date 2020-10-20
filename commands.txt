@@ -70,6 +70,10 @@ watch nvidia-smi (check GPU usage status on servers)
 scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
 scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/code/src/dynamic_images.mp4 /home/cwfparsonson/Downloads
 
+showquota (show how much space you have left on server hard drive)
+df -h (print disk free space in human readable format)
+du -h (print disk utilisation in human readable format)
+
 ------------------------------------------------------
 
 
