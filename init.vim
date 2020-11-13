@@ -1,7 +1,9 @@
 " IMPORT COC CONFIGURATION
 source ~/.config/nvim/plugged/coc_conf.vim
 
-" PLUGIN (using vim-plug package manager. Do :PlugInstall to install plugins)
+" PLUGIN 
+" (using vim-plug package manager. Do :PlugInstall to install plugins).
+" Uninstall by commenting out Plug line below -> :PlugClean 
 call plug#begin()
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
@@ -9,7 +11,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
 Plug 'neomake/neomake'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
 call plug#end()
