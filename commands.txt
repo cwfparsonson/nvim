@@ -65,6 +65,8 @@ grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files.
 grep -rl '<oldstr>' . | xargs sed -i 's/<oldstr>/<newstr>/g' (find and replace all oldstr with new str in all child trees/dirs/files)
 
 watch nvidia-smi (check GPU usage status on servers)
+top -i (list CPU usage on servers)
+htop (monitor vital resource usage (RAM etc) on servers https://linuxtogether.org/htop-command-explanation/)
 
 # transfer file from/to local machine to/from server (use scp -r to transfer folder)
 scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
