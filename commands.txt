@@ -337,6 +337,9 @@ conda install ipykernel
 # install all packages in requirements.txt with conda, if not available in conda install with pip
 while read requirement; do conda install --yes $requirement || pip install $requirement; done < requirements.txt
 
+# if installed package not found in notebook, check executable path in notebook and in terminal. If different, conda env executable path not set correctly
+import sys
+print(sys.executable)
 
 
 
