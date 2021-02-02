@@ -341,7 +341,10 @@ while read requirement; do conda install --yes $requirement || pip install $requ
 import sys
 print(sys.executable)
 
-
+# export environment to an environment.yml file
+conda env export > environment.yml
+# build an env from the environment.yml file (env name defined at top of .yml file)
+conda env create -f environment.yml
 
 
 
