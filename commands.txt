@@ -353,6 +353,12 @@ conda env create -f environment.yml
 
 
 
+----------------------------------------------------
+# TENSORBOARD
+------------------------------------------------------
+# launch tensorboard on specific port
+tensorboard --logdir <folder_containing_saved_log_files>/ --port=<tensorboard_port_number>
+
 
 
 
