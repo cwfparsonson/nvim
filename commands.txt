@@ -84,9 +84,12 @@ sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
 # clear old headers and images (useful for freeing root memory)
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 
-# list software installed on your machine by size
-sort -k 2 -n | grep -v deinstall | awk '{printf "%.3f MB \t %s\n", $2/(1024), $1}'
-sudo apt-get remove <application_name> (remove software appliction)
+# list packages in estimated size order (in kB)
+dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
+# this list includes packages that have been removed but not purged. To purge such packages, run:
+dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
+# remove softare application:
+sudo apt-get remove <application_name>
 
 
 
