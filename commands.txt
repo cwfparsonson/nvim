@@ -74,6 +74,7 @@ scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/c
 
 showquota (show how much space you have left on server hard drive)
 quota -u <user> (same as above but works if don't have certain packages installed)
+# N.B. UCL server deleted files go to ./local/share/Trash
 df -h (print disk free space in human readable format)
 du -h (print disk utilisation in human readable format)
 du . | sort -nr | head -n10 (list top 10 largest files from current directory)
