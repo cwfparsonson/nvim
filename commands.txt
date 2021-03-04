@@ -48,6 +48,7 @@ lsof -ti:<port_number> | xargs kill -9 (kill all processes using port number)
 ----------------------------------------------------
 # LINUX
 ------------------------------------------------------
+ls -lah (list all files in dir in human readable format (size, date))
 dpkg -L <packagename> (to find where package is installed)
 pwd (print working directory)
 grep -w <word> * (search all files in directory for word)
@@ -262,6 +263,12 @@ has since been added which is conflicting with the original. To resolve,
 delete the highlight notation (i.e. delete <<<<<< HEAD, ====== etc) AND
 either the original content or the new content so that only one is remaining,
 then push.
+
+# commited large file >100 MB GitHub limit
+git fsck (find where dangling blob is)
+git gc (do garbage collection) -> should now have <file_name> of file(s) taking up too much sapce in commit history
+git filter-branch -f --tree-filter 'rm -f <file_name>' HEAD (remove <file_name> from all commit histories)
+git push origin --force (push updated commit histories with large file(s) now removed)
 
 
 ------------------------------------------------------
