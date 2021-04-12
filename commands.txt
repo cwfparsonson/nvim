@@ -73,13 +73,15 @@ htop (monitor vital resource usage (RAM etc) on servers https://linuxtogether.or
 scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
 scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/code/src/dynamic_images.mp4 /home/cwfparsonson/Downloads
 
+ps -ef | grep zciccwf # list running processes for user zciccwf (-ps -> list processes, -e -> show all processes, -f -> show processes in detailed full format, grep -> find lines containing a pattern)
+
 showquota (show how much space you have left on server hard drive)
 quota -u <user> (same as above but works if don't have certain packages installed)
 # N.B. UCL server deleted files go to /home/zciccwf/.local/share/Trash/files
 df -h (print disk free space in human readable format)
 du -h (print disk utilisation in human readable format)
-du . | sort -nr | head -n10 (list top 10 largest files from current directory)
-du -s * | sort -nr | head -n10 (list top 10 largest directories from current directory)
+du . | sort -nr | head -n10 (list top 10 largest directories from current directory)
+du -s * | sort -nr | head -n10 (list top 10 largest files from current directory)
 
 # remove large log file safely
 sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
@@ -118,6 +120,7 @@ o (go to line below insert mode)
 :q! (force quit)
 :wq (save and quit)
 :w (save file)
+:e (update open file to most recently saved version)
 :<lineNumber> (takes you to line)
 :PlugInstall (installs new plugin)
 Ctrl-w <arrowKey> (switch panes)
