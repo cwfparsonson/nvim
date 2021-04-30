@@ -208,6 +208,10 @@ ctrl+t (open result in new tab)
 ctrl+^ (switch between last 2 files opened with fzf)
 Tip: Have a main file that serves as hub, <Ctrl + p> to file you want to go to (spoke), and then <Ctrl + ^> back to hub (avoid hopping around in a triangle between more than 2 files)
 
+# Format text (e.g. docstring) to 80 character width limit
+1. Select line(s) to format with v
+2. gq
+
 
 
 
