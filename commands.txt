@@ -104,6 +104,29 @@ sudo apt-get remove <application_name>
 
 
 
+
+----------------------------------------------------
+# MYRIAD
+------------------------------------------------------
+https://www.rc.ucl.ac.uk/docs/Clusters/Myriad/
+ssh zciccwf@myriad.rc.ucl.ac.uk
+
+- has ~100 nodes (servers) each with 36 cores per node. These 100 nodes are made up of 3 different node types with different specs
+- can use 1 core for up to 72 hours, or 2-36 cores for up to 48 hours
+- check memory quota with lquota. Get 150 GB for /home/zciccwf/, and 1 TB for /scratch/scratch/zciccwf/
+
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------------------------------------
 # NEOVIM
 ------------------------------------------------------
