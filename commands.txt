@@ -96,6 +96,8 @@ dpkg --list |grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
 # remove softare application:
 sudo apt-get remove <application_name>
 
+# to be able to install things without sudo privileges on servers etc, go to https://docs.brew.sh/Homebrew-on-Linux and follow alternative installation instructions where git clone homebrew into /home directory. Can then brew install neovim etc
+
 
 
 ------------------------------------------------------
@@ -369,7 +371,7 @@ e.g. sphinx-build -b pdf docs/ docs/_build/pdf
 ------------------------------------------------------
 # launch jupyter-notebook inside a conda environment
 conda install ipykernel
-python -m ipykernel install --user --name <env_name> --display-name "<env_display_name>"
+python -m ipykernel install --user --name <env_name> --display-name "<env_display_name>" # make env appear as kernel in notebook
 jupyter-notebook
 # then click Kernel -> Change kernel -> <env_name>
 
