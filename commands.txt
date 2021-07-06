@@ -99,6 +99,12 @@ sudo apt-get remove <application_name>
 
 # to be able to install things without sudo privileges on servers etc, go to https://docs.brew.sh/Homebrew-on-Linux and follow alternative installation instructions where git clone homebrew into /home directory. Can then brew install neovim etc
 
+# download data from google drive (replace link w/ link where your data is)
+gdown https://drive.google.com/uc?id=0B7EVK8r0v71pOXBhSUdJWU1MYUk
+
+# unzip all gzip files in a directory
+gunzip *.gz
+
 
 
 ------------------------------------------------------
