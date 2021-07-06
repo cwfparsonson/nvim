@@ -70,6 +70,7 @@ top -i (list CPU usage on servers)
 htop (monitor vital resource usage (RAM etc) on servers https://linuxtogether.org/htop-command-explanation/)
 
 # transfer file from/to local machine to/from server (use scp -r to transfer folder)
+# N.B. Must be on local machine when doing this!!
 scp /home/cwfparsonson/Downloads/test.csv zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/personal/projects/kaggle/titanic/files
 scp zciccwf@ssh.ee.ucl.ac.uk:/home/zciccwf/phd_project/projects/deep_scheduler/code/src/dynamic_images.mp4 /home/cwfparsonson/Downloads
 
