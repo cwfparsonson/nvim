@@ -91,6 +91,12 @@ sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
 # clear old headers and images (useful for freeing root memory)
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 
+# list top 50 applications by memory usage
+dpkg-query --show --showformat='${Package;-50}\t${Installed-Size}\n' | sort -k 2 -n | grep -v deinstall | awk '{printf "%.3f MB \t %s\n", $2/(1024), $1}'
+
+# completely remove application
+sudo apt purge <application_name>
+
 # list packages in estimated size order (in kB)
 dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
 # this list includes packages that have been removed but not purged. To purge such packages, run:
