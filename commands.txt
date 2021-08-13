@@ -94,6 +94,13 @@ dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/"
 # remove old kernels (useful for freeing memory)
 sudo apt-get autoremove --purge
 
+# list top 50 applications by memory usage
+dpkg-query --show --showformat='${Package;-50}\t${Installed-Size}\n' | sort -k 2 -n | grep -v deinstall | awk '{printf "%.3f MB \t %s\n", $2/(1024), $1}'
+
+# completely remove application
+sudo apt purge <application_name>
+>>>>>>> 3eec252e69a0ef8e96abe7dc223d72852d1a38a8
+
 # list packages in estimated size order (in kB)
 dpkg-query -Wf '${Installed-Size}\t${Package}\n' | sort -n
 # this list includes packages that have been removed but not purged. To purge such packages, run:
