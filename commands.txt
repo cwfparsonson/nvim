@@ -88,6 +88,10 @@ du -h . | sort -rh (list largest files from current directory and sort in order 
 # remove large log file safely
 sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
 
+# cap /var/log/journal to 100 MB and clear data beyond 10 days old (https://askubuntu.com/questions/1238214/big-var-log-journal)
+journalctl --vacuum-size=100M
+journalctl --vacuum-time=10d
+
 # clear old headers and images (useful for freeing root memory)
 dpkg -l 'linux-*' | sed '/^ii/!d;/'"$(uname -r | sed "s/\(.*\)-\([^0-9]\+\)/\1/")"'/d;s/^[^ ]* [^ ]* \([^ ]*\).*/\1/;/[0-9]/!d' | xargs sudo apt-get -y purge
 
