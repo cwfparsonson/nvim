@@ -81,7 +81,7 @@ quota -u <user> (same as above but works if don't have certain packages installe
 # N.B. UCL server deleted files go to /home/zciccwf/.local/share/Trash/files
 df -h (print disk free space in human readable format)
 du -h (print disk utilisation in human readable format)
-du . | sort -nr | head -n10 (list top 10 largest directories from current directory)
+du -h . | sort -nr | head -n10 (list top 10 largest directories from current directory)
 du -s * | sort -nr | head -n10 (list top 10 largest files from current directory)
 du -h . | sort -rh (list largest files from current directory and sort in order of size)
 
