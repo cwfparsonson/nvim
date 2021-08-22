@@ -26,7 +26,7 @@ tmux new -s <session-name> (create session)
 tmux attach-session -t <session-name> (go into session already created)
 tmux kill-session -t <session-name>
 
-# Creating New SSH Tunnel (mammoth port: 6017, berlin port: 10017)
+# Creating New SSH Tunnel (mammoth port: 6017, berlin port: 10017). https://docs.anaconda.com/anaconda/user-guide/tasks/remote-jupyter-notebook/
 1. In terminal, ssh into final server you want to tunnel to
 2. tmux new -s <name_of_session>
 3. (tmux attach-session -t <session_name>) if didn't open automatically
@@ -41,6 +41,8 @@ tmux kill-session -t <session-name>
 11. if prompted, copy-paste the token=<copy-paste-this-token> into prompt asking for password/token
 # NOTE: If get error 'bind: Cannot assign requested address', is because is trying to bind on IPv6 address. Force IPv4 with -4 flag:
 ssh -Nf -4 -L mammoth_port_####:localhost:berlin_port_#### zciccwf@ssh.ee.ucl.ac.uk
+# N.B. In windows for step 9, do not do the -Nf flag i.e. do:
+ssh -L mammoth_port_####:localhost:berlin_port_#### zciccwf@ssh.ee.ucl.ac.uk
 
 lsof -ti:<port_numer> (list all processes using port number)
 lsof -ti:<port_number> | xargs kill -9 (kill all processes using port number)
