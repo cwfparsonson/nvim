@@ -41,7 +41,7 @@ tmux kill-session -t <session-name>
 11. if prompted, copy-paste the token=<copy-paste-this-token> into prompt asking for password/token
 # NOTE: If get error 'bind: Cannot assign requested address', is because is trying to bind on IPv6 address. Force IPv4 with -4 flag:
 ssh -Nf -4 -L mammoth_port_####:localhost:berlin_port_#### zciccwf@ssh.ee.ucl.ac.uk
-# N.B. In windows for step 9, do not do the -Nf flag i.e. do:
+# N.B. In windows for step 9, do not do the -Nf flag, type into PowerShell, and do not close PowerShell. i.e. do:
 ssh -L mammoth_port_####:localhost:berlin_port_#### zciccwf@ssh.ee.ucl.ac.uk
 
 lsof -ti:<port_numer> (list all processes using port number)
