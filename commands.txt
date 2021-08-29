@@ -86,6 +86,7 @@ du -h (print disk utilisation in human readable format)
 du -h . | sort -nr | head -n10 (list top 10 largest directories from current directory)
 du -s * | sort -nr | head -n10 (list top 10 largest files from current directory)
 du -h . | sort -rh (list largest files from current directory and sort in order of size)
+du -cha --max-depth=1 / | grep -E "M|G" (list largest directorys in / (root) -> can then do e.g. /var/log to hone in on what is taking space)
 
 # remove large log file safely
 sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
