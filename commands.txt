@@ -123,6 +123,8 @@ gdown https://drive.google.com/uc?id=0B7EVK8r0v71pOXBhSUdJWU1MYUk
 # unzip all gzip files in a directory
 gunzip *.gz
 
+# ssh config location
+/home/cwfparsonson/.ssh
 
 
 ------------------------------------------------------
