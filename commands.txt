@@ -67,6 +67,10 @@ exit (exit ssh'd server)
 grep -rnw -e '<str>' (recursively look for string in all child trees/dirs/files. -r=recursive,-n=line number,-w=match whole word,-l=file names of matches
 grep -rl '<oldstr>' . | xargs sed -i 's/<oldstr>/<newstr>/g' (find and replace all oldstr with new str in all child trees/dirs/files)
 
+# find and rename files in all sub directories from current directory (https://stackoverflow.com/questions/16541582/find-multiple-files-and-rename-them-in-linux)
+find . -iname "<old_file_name>" -exec rename <old_file_name> <new_file_name> '{}' \;
+
+
 watch nvidia-smi (check GPU usage status on servers)
 top -i (list CPU usage on servers)
 htop (monitor vital resource usage (RAM etc) on servers https://linuxtogether.org/htop-command-explanation/)
