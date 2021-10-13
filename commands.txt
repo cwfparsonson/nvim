@@ -441,6 +441,12 @@ tensorboard --logdir <folder_containing_saved_log_files>/ --port=<tensorboard_po
 import pdb; pdb.set_trac()
 
 
+# PYTORCH
+# timing pytorch cuda functions with time profiling:
+with torch.autograd.profiler.profile(use_cuda=True) as prof:
+    ...
+print(prof.table(sort_by='cuda_time_total'))
+
 
 
 
