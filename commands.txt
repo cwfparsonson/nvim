@@ -90,6 +90,7 @@ du -h (print disk utilisation in human readable format)
 du -h . | sort -nr | head -n10 (list top 10 largest directories from current directory)
 du -s * | sort -nr | head -n10 (list top 10 largest files from current directory)
 du -h . | sort -rh (list largest files from current directory and sort in order of size)
+du -h . | sort -rh | head -n30 (list top 30 folders and their respective memory usage as well as total usage of current dir)
 du -cha --max-depth=1 / | grep -E "M|G" (list largest directorys in / (root) -> can then do e.g. /var/log to hone in on what is taking space)
 
 # remove large log file safely
