@@ -439,7 +439,7 @@ tensorboard --logdir <folder_containing_saved_log_files>/ --port=<tensorboard_po
 # PYTHON
 ------------------------------------------------------
 # pause programme at certain line in code and then live edit code to debug
-import pdb; pdb.set_trac()
+import pdb; pdb.set_trace()
 
 
 # PYTORCH
