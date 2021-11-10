@@ -473,8 +473,11 @@ docker save <docker_image_id> | gzip > <file_name>.tar.gz
 # convert docker image to singularity image (need for e.g. remote servers which don't support docker) https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/
 # 1. save docker image on local or wherever docker container is already built (see above)
 # 2. use scp to transfer saved container to remote (see above scp notes)
-# 3. on remote, convert saved docker image to singularity image
-/opt/singularity/bin/opt build --sandbox <project_name> docker-archive://<file_name>.tar.gz
+# 3. on remote, convert saved docker image to singularity image by building singularity image
+/opt/singularity/bin/singularity build --sandbox <project_name> docker-archive://<file_name>.tar.gz
+# run singularity container
+/opt/singularity/bin/singularity run <project_name>
+
 
 
 
