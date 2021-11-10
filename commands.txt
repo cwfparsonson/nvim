@@ -456,7 +456,25 @@ print(prof.table(sort_by='cuda_time_total'))
 
 
 
+----------------------------------------------------
+# SINGULARITY AND DOCKER
+------------------------------------------------------
+# in Dockerfile in <project_dir>, set WORKDIR path, then use docker build (building for first time takes a while)
+docker build . -t <docker_project_name> -f Dockerfile
+# once built, can enter docker project with docker run -> should then be in docker container and can run things
+docker run -it --rm -p 8888:8888 --volume <project_dir>:<WORKDIR> <docker_project_name>
 
+# get docker image id
+docker images
+
+# save compressed <file_name>.tar.gz docker image
+docker save <docker_image_id> | gzip > <file_name>.tar.gz
+
+# convert docker image to singularity image (need for e.g. remote servers which don't support docker) https://linuxize.com/post/how-to-extract-unzip-tar-gz-file/
+# 1. save docker image on local or wherever docker container is already built (see above)
+# 2. use scp to transfer saved container to remote (see above scp notes)
+# 3. on remote, convert saved docker image to singularity image
+/opt/singularity/bin/opt build --sandbox <project_name> docker-archive://<file_name>.tar.gz
 
 
 
