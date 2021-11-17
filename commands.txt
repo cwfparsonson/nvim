@@ -122,6 +122,7 @@ sudo apt-get remove <application_name>
 
 # to be able to install things without sudo privileges on servers etc, go to https://docs.brew.sh/Homebrew-on-Linux and follow alternative installation instructions where git clone homebrew into /home directory. Can then brew install neovim etc
 # when installed, run echo $PATH to see where your executable paths are, and move neovim installation to one of these paths and rename file to nvim to make nvim executable
+# to get your config, git clone this nvim repo into ~/.config/
 
 # download data from google drive (replace link w/ link where your data is)
 gdown https://drive.google.com/uc?id=0B7EVK8r0v71pOXBhSUdJWU1MYUk
