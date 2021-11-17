@@ -483,7 +483,27 @@ docker save <docker_image_id> | gzip > <file_name>.tar.gz
 /opt/singularity/bin/singularity run <project_name>
 
 
+# echo-ridl docker usage
+# go to google coud platofmr -> projects -> research -> echo_big -> click tick and run (N.B. REMEMBER TO CLICK STOP WHEN NOT RUNNING) -> copy-past ssh into terminal to ssh to instadeep google cloud platform (GCP)
+# N.B. Will need to make sure instances etc. are in echo/ dir being built or won't be able to access inside Docker container unless explicitly mount them with --volume <thing_to_mound_from_host>:<where_to_mount> in below docker run line
 
+# Make echo_gcp docker image
+sudo docker build . -t echo_gcp -f ./gcp.Dockerfile
+
+# Start echo_gcp image in the background (with name echo_container), mount echo directory (so code changes are detected).
+sudo docker run --gpus all -itd --rm --name echo_container -p 8888:8888 -p 6006:6006 --volume ~/echo:/home/app/echo echo_gcp
+
+# Enter running image called echo_container.
+sudo docker exec -it echo_container bash
+
+# See running docker instances and IDs.
+sudo docker ps
+
+# Kill running docker instance.
+sudo docker kill [ID]
+
+# Run experiment.
+nohup python experiments/run_dqn_jax.py > exp.out &
 
 
 
