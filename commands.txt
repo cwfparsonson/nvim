@@ -2,7 +2,7 @@
 # TMUX
 ------------------------------------------------------
 (<leader> == ctrl+,)
-tmux source-file .tmux.conf (updated tmux to current .tmux.conf config)
+tmux source-file .tmux.conf (updated tmux to current .tmux.conf config) (N.B. usually in ~/.tmux.conf)
 tmux ls (check what is running)
 tmux list-panes -a
 tmux list-window
