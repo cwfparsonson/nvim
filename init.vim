@@ -15,6 +15,7 @@ Plug 'neomake/neomake'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
+"Plug 'ojroques/vim-oscyank'
 call plug#end()
 
 " GENERAL CONFIG
@@ -38,10 +39,13 @@ syntax on 		            " syntax highlighting
 set pastetoggle=<F2>        " switch in and out of paste mode
 colorscheme gruvbox
 set background=dark         " set gruvbox colorscheme to dark mode
+"set clipboard=unnamedplus
 :let g:airline_theme='wombat' " set theme of airline ribbon
 let g:neomake_python_enabled_markers = ['pylint'] " set pylint as python code checker
 call neomake#configure#automake('nrwi', 500)
 nnoremap <C-p> :GFiles<CR>
+" remap remote-to-local yanking to <leader>c
+"vnoremap <leader>c :OSCYank<CR>
 set relativenumber
 set noerrorbells            " disable error sound effects
 set smartcase
