@@ -191,6 +191,7 @@ v (select characters)
 y (yank the selection)
 p (paste on line below)
 P (paste on line above)
+shift + p (paste in-line)
 d (cut selections)
 D (delete rest of line)
 C (clear rest of line and enter insert mode)
@@ -244,6 +245,12 @@ ctrl+w o (close all buffers except current)
 :vertical resize 20 (set split to 20 columns wide)
 ctrl+w = (equally size splits)
 Tip: Rarely use these commands; prefer to quickly open and close any splits to focus on one buffer
+
+# Recording
+1. qk (start recording a new macro and assign macro to k key)
+2. <do thing you want to record>
+3. q (stop recording macro -> macro now assigned to key k)
+4. @k (call macro. N.B. Can call macro on multiple lines)
 
 # Navigation
 :tab new (open new tab)
