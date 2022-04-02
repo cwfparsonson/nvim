@@ -349,6 +349,18 @@ git gc (do garbage collection) -> should now have <file_name> of file(s) taking 
 git filter-branch -f --tree-filter 'rm -f <file_name>' HEAD (remove <file_name> from all commit histories)
 git push origin --force (push updated commit histories with large file(s) now removed)
 
+# make branch for GitHub issue and sync to master with pull request
+1. Go to issue on GitHub -> Development -> create a branch <issue_branch> -> pull branch to local
+2. When made changes and want to sync to master:
+git add .
+git commit -m "<comment>"
+git checkout master (switches to master branch)
+git pull (pulls master branch to your local to ensure your master is up-to-date)
+git checkout <issue_branch> (switch back to <issue_branch>)
+git rebase master (syncs master branch and <issue_branch> commits into one sequential history; as if have worked on same branch all along)
+git push origin <issue_branch> (push changes to <issue_branch>)
+3. Go to GitHub master -> compare & pull request -> click through options -> <issue_branch> now merged into master
+
 
 ------------------------------------------------------
 # JEKYLL, BUNDLE & GITHUB PAGES
