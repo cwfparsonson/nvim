@@ -526,3 +526,10 @@ nohup python experiments/run_dqn_jax.py > exp.out &
 
 
 
+----------------------------------------------------
+# DEEP GRAPH LIBRARY (DGL)
+------------------------------------------------------
+# change backend between tensorflow and pytorch (solves a lot of weird import issues to use pytorch!)
+1. cd ~/.dgl/
+2. nvim config.json
+3. change as desired
