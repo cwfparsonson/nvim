@@ -449,6 +449,10 @@ conda env export > environment.yml
 # build an env from the environment.yml file (env name defined at top of .yml file)
 conda env create -f environment.yml
 
+# tqdm not working in notebook (https://github.com/tqdm/tqdm/issues/394)
+pip install ipywidgets 
+jupyter nbextension enable --py widgetsnbextension
+
 
 
 
