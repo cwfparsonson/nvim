@@ -367,6 +367,10 @@ git push origin <issue_branch> (push changes to <issue_branch>)
 ------------------------------------------------------
 bundle exec jekyll serve --force_polling (build site locally, then http://localhost:4000) (N.B. If make change to .yml, must restart to refresh)
 
+# if github pages not updating after push 
+1. Go to _pages/about.md
+2. Make change (e.g. delete last blank line at end of page) and commit change
+3. Page should update in 10-20 mins
 
 
 
