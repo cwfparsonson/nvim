@@ -136,6 +136,13 @@ tar -zcvf archive.tar.gz directory/
 # ssh config location
 /home/cwfparsonson/.ssh
 
+# changing screen orientation of monitor(s)
+arandr -> make changes -> save
+
+# teams for linux not launching https://docs.microsoft.com/en-us/answers/questions/548771/teams-fails-to-load-on-linux.html
+snap install teams
+snap run teams
+
 
 ------------------------------------------------------
 
