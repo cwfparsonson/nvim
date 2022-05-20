@@ -548,3 +548,17 @@ nohup python experiments/run_dqn_jax.py > exp.out &
 1. cd ~/.dgl/
 2. nvim config.json
 3. change as desired
+
+
+
+----------------------------------------------------
+# NPM FOR CHROME EXTENSIONS
+------------------------------------------------------
+# setup
+1. cd <project_root_dir>
+2. npm install
+3. npm run build
+4. in browser, go to chrome://extensions
+5. click 'Load Unpacked'
+6. go to <project_root_dir> and select the 'build' folder -> open
+7. extension should now be loaded into chrome
