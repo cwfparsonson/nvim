@@ -131,7 +131,7 @@ gdown https://drive.google.com/uc?id=0B7EVK8r0v71pOXBhSUdJWU1MYUk
 gunzip *.gz
 
 # use tar and gzip to zip a directory https://unix.stackexchange.com/questions/93139/can-i-zip-an-entire-folder-using-gzip
-tar -zcvf archive.tar.gz directory/ 
+tar -zcvf <file_name>.tar.gz <dir_name>/ 
 
 # ssh config location
 /home/cwfparsonson/.ssh
