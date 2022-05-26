@@ -489,6 +489,12 @@ with torch.autograd.profiler.profile(use_cuda=True) as prof:
     ...
 print(prof.table(sort_by='cuda_time_total'))
 
+# getting torch geometric to work
+1. Create a fresh conda environment
+2. Go to https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html and look at compatible pytorch cuda versions (e.g. PyTorch 1.10 Conda Cuda 10.2)
+3. Go to https://pytorch.org/get-started/previous-versions/ and find the correct conda installation command to install torch torchvision torchaudio cudatoolkit e.g. conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch -y
+3. Install torch geometric and all associated packages with conda install pyg -c pyg -y
+
 
 
 
