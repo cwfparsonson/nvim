@@ -143,6 +143,12 @@ arandr -> make changes -> save
 snap install teams
 snap run teams
 
+# when printing to terminal, save terminal outputs to an <output.txt> file (https://unix.stackexchange.com/questions/200637/save-all-the-terminal-output-to-a-file)
+script output.txt # start a script session
+<do stuff> # run e.g. python <script.py> which prints out info to terminal -> print outs will be saved to output.txt
+exit # close the script session
+# can then upload outputs to e.g. https://text-compare.com/ to compare outputs of different experiments etc.
+
 
 ------------------------------------------------------
 
