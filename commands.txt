@@ -109,9 +109,12 @@ sudo apt-get autoremove --purge
 # list top 50 applications by memory usage
 dpkg-query --show --showformat='${Package;-50}\t${Installed-Size}\n' | sort -k 2 -n | grep -v deinstall | awk '{printf "%.3f MB \t %s\n", $2/(1024), $1}'
 
-# list journal disk usage and cap usage
+# list journal disk usage and cap usage (useful for freeing disk memory)
 journalctl --disk-usage
 sudo journalctl --vacuum-size=100M
+
+# clean conda packages which are unused and cached (useful for freeing disk memory)
+conda clean --all
 
 # completely remove application
 sudo apt purge <application_name>
