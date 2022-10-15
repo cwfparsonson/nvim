@@ -477,6 +477,9 @@ conda env create -f environment.yml
 pip install ipywidgets 
 jupyter nbextension enable --py widgetsnbextension
 
+# check which environment you're in by seeing where python library is
+which python
+
 
 
 
@@ -505,7 +508,7 @@ print(prof.table(sort_by='cuda_time_total'))
 # getting torch geometric to work
 1. Create a fresh conda environment
 2. Go to https://pytorch-geometric.readthedocs.io/en/latest/notes/installation.html and look at compatible pytorch cuda versions (e.g. PyTorch 1.10 Conda Cuda 10.2)
-3. Go to https://pytorch.org/get-started/previous-versions/ and find the correct conda installation command to install torch torchvision torchaudio cudatoolkit e.g. conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch -y
+3. Go to https://pytorch.org/get-started/previous-versions/ and find the correct conda installation command to install torch torchvision torchaudio cudatoolkit and install e.g. conda install pytorch==1.10.0 torchvision==0.11.0 torchaudio==0.10.0 cudatoolkit=10.2 -c pytorch -y (N.B. in past have had to install with pip instead to get working with cuda 11.6 on servers)
 3. Install torch geometric and all associated packages with conda install pyg -c pyg -y
 
 
