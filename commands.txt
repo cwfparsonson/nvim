@@ -156,6 +156,9 @@ script output.txt # start a script session
 exit # close the script session
 # can then upload outputs to e.g. https://text-compare.com/ to compare outputs of different experiments etc.
 
+# autocomplete from command line history (https://apple.stackexchange.com/questions/287577/how-to-make-the-terminal-auto-complete-from-the-command-history)
+ctrl+r -> start typing -> enter
+
 
 ------------------------------------------------------
 
