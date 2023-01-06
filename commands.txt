@@ -136,7 +136,10 @@ sudo apt-get remove <application_name>
 2. In google drive, right-click on <folder_name>.tar.gz -> 'Get link' -> change 'General access' to 'Anyone with link' -> 'Copy link'
 3. Activate conda env with gdown library
 4. gdown --folder https://drive.google.com/drive/folders/1Cr8RZGB0RazP7kHom_C_xC91CQAY_OJG # N.B. You MUST remove the additional characters at the end of the link e.g. https://drive.google.com/drive/folders/1Cr8RZGB0RazP7kHom_C_xC91CQAY_OJG?usp=share_link becomes https://drive.google.com/drive/folders/1Cr8RZGB0RazP7kHom_C_xC91CQAY_OJG
-5. Uncompress folder as desired
+5. Uncompress folder as desired E.g.:
+i) gunzip <folder_name>.tar.gz 
+ii) tar --extract --file=<folder_name>.tar
+
 
 # download data from google drive (replace link w/ link where your data is)
 gdown https://drive.google.com/uc?id=0B7EVK8r0v71pOXBhSUdJWU1MYUk
