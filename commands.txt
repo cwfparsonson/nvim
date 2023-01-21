@@ -387,11 +387,9 @@ git push origin --force (push updated commit histories with large file(s) now re
 2. When made changes and want to sync to master:
 git add .
 git commit -m "<comment>"
-git checkout master (switches to master branch)
-git pull (pulls master branch to your local to ensure your master is up-to-date)
-git checkout <issue_branch> (switch back to <issue_branch>)
+git pull --rebase origin master (pulls master branch to your local to ensure your master is up-to-date)
 git rebase master (syncs master branch and <issue_branch> commits into one sequential history; as if have worked on same branch all along)
-git push origin <issue_branch> (push changes to <issue_branch>)
+git push origin <issue_branch> (push changes to <issue_branch>) (may need -f flag to force push to your issue branch since rebase overwrote old commits)
 3. Go to GitHub master -> compare & pull request -> click through options -> <issue_branch> now merged into master
 
 
