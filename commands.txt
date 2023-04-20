@@ -215,6 +215,14 @@ ssh zciccwf@myriad.rc.ucl.ac.uk
 ------------------------------------------------------
 # NEOVIM
 ------------------------------------------------------
+# Installing neovim from source (https://github.com/neovim/neovim/wiki/Building-Neovim)
+- build the prereqs on your system https://github.com/neovim/neovim/wiki/Building-Neovim#build-prerequisites
+- `git clone https://github.com/neovim/neovim`
+- `cd neovim` (go into cloned neovim repo)
+- `git checkout stable` (go on the stable release branch)
+- `make CMAKE_BUILD_TYPE=RelWithDebInfo`
+- `sudo make install` (by default, will install in `/usr/local/` (check by running `which -a nvim`) -> can set neovim extension path in VSCode to `/usr/local/bin/nvim`)
+
 # Basic
 h j k l (left up down right)
 nvim <filename> (open file with neovim)
