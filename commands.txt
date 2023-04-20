@@ -511,6 +511,9 @@ jupyter nbextension enable --py widgetsnbextension
 # check which environment you're in by seeing where python library is
 which python
 
+# to use libmamba as default conda solver (much faster), inside your conda environment:
+- `conda install -n base conda-libmamba-solver` # installs libmamba
+- `conda config --set solver libmamba` # sets libmama as default solver
 
 
 
