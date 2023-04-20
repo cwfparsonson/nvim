@@ -93,6 +93,11 @@ du -h . | sort -rh (list largest files from current directory and sort in order 
 du -h . | sort -rh | head -n30 (list top 30 folders and their respective memory usage as well as total usage of current dir)
 du -cha --max-depth=1 / | grep -E "M|G" (list largest directorys in / (root) -> can then do e.g. /var/log to hone in on what is taking space)
 
+# remove anything in your ~/.cache, ~/anaconda3, and ~/.config directories which was last accessed morie than a year ago
+find ~/.cache/ -type f -atime +365 -delete
+find ~/anaconda3/ -type f -atime +365 -delete
+find ~/.config/ -type f -atime +365 -delete
+
 # remove large log file safely
 sudo bash -c 'cat /dev/null > /var/log/uvcdynctrl-udev.log'
 
@@ -169,6 +174,14 @@ exit # close the script session
 # autocomplete from command line history (https://apple.stackexchange.com/questions/287577/how-to-make-the-terminal-auto-complete-from-the-command-history)
 ctrl+r -> start typing -> enter
 
+
+# Resizing Windows - Linux dual boot partition
+https://www.youtube.com/watch?v=vlVXPtJ20hA&t=281s
+- Download Ubuntu .iso image and put it onto a flash drive (requires ~4-5 GB of space)
+- With flash drive plugged in, restart PC and keep pressing F10 and F12 to go into boot mode
+- Select the flash drive's name -> this will now boot up Ubuntu from your Flash drive
+- Open terminal and run `sudo gparted` -> launch gparted -> resize partitions as desired (decrease a partition first then increase the one you want to increase next) -> press tick when done
+- Restart laptop and dual boot as usual -> should now be partitioned
 
 ------------------------------------------------------
 
