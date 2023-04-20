@@ -479,7 +479,7 @@ e.g. sphinx-build -b pdf docs/ docs/_build/pdf
 
 
 
-----------------------------------------------------
+------------------------------------------------------
 # CONDA
 ------------------------------------------------------
 # launch jupyter-notebook inside a conda environment
@@ -514,6 +514,24 @@ which python
 # to use libmamba as default conda solver (much faster), inside your conda environment:
 - `conda install -n base conda-libmamba-solver` # installs libmamba
 - `conda config --set solver libmamba` # sets libmama as default solver N.B. If 'solver' is not in config, `nvim ~/.condarc` and add `solver: libmamba` line
+
+
+
+
+
+------------------------------------------------------
+# POETRY
+------------------------------------------------------
+https://python-poetry.org/docs/basic-usage/
+
+# inside project, init `.toml` file with:
+`poetry init`
+
+# to install set of dependencies with poetry which have been specified in a `requirements.txt` file:
+`cat requirements.txt | xargs poetry add`
+
+
+
 
 
 
