@@ -626,13 +626,13 @@ nohup python experiments/run_dqn_jax.py > exp.out &
 
 
 ----------------------------------------------------
-# NPM FOR CHROME EXTENSIONS
+# NPM 
 ------------------------------------------------------
 # setup
 1. cd <project_root_dir>
-2. npm install
-3. npm run build
-4. in browser, go to chrome://extensions
+2. npm install # installs all package requirements (similar to installing python packages from requirements.txt) -> makes package-lock.json and node_modules/
+3. npm run dev OR npm run build # launches application on location host -> can now view in browser (N.B. dev -> automatically updates when you change code, build -> for production)
+4. If building webapp, just go to localhost:XXXX (XXXX is port number you're running on). If doing extension in browser, go to chrome://extensions
 5. click 'Load Unpacked'
 6. go to <project_root_dir> and select the 'build' folder -> open
 7. extension should now be loaded into chrome
