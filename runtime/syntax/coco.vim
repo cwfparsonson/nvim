@@ -29,4 +29,3 @@ hi def link cocoCharacter        Character
 hi def link cocoOperator         Operator
 hi def link cocoProductionCode   Statement
 hi def link cocoPragma           Special
-
