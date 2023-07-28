@@ -222,6 +222,10 @@ ssh zciccwf@myriad.rc.ucl.ac.uk
 - `git checkout stable` (go on the stable release branch)
 - `make CMAKE_BUILD_TYPE=RelWithDebInfo`
 - `sudo make install` (by default, will install in `/usr/local/` (check by running `which -a nvim`) -> can set neovim extension path in VSCode to `/usr/local/bin/nvim`)
+- git clone https://github.com/cwfparsonson/nvim.git ~/.config/nvim (get your custom neovim setup)
+- sudo chown -R $USER: ~/.local (give yourself permissions)
+- chmod -R 700 ~/.local (give yourself permissions)
+- nvim -> :PlugInstall
 
 # Basic
 h j k l (left up down right)
